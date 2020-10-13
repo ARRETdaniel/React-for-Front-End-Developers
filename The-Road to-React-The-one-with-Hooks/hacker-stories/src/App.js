@@ -13,7 +13,7 @@ const App = () => {
     {
       title: "Redux",
       url: "https://redux.js.org/",
-      author: "Dan Abramov, Andrew Clark",
+      author: "Dan Abramov, Andrew Clarfk",
       num_comments: 2,
       points: 5,
       objectID: 1,
