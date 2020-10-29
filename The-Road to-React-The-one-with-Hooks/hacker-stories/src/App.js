@@ -13,14 +13,20 @@ const App = () => {
     {
       title: "Redux",
       url: "https://redux.js.org/",
-      author: "Dan Abramov, Andrew Clarfk",
+      author: "Dan Abramov, Andrew Clark",
       num_comments: 2,
       points: 5,
       objectID: 1,
     },
   ];
 
-  const [searchTerm, setSearchTerm] = React.useState("React");
+  const [searchTerm, setSearchTerm] = React.useState(
+    localStorage.getItem("search") || "React"
+  );
+
+  React.useEffect(() => {
+    localStorage.setItem("search", searchTerm);
+  }, [searchTerm]);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
